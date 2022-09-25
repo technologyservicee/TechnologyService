@@ -1,0 +1,615 @@
+//-------------------
+// PATRON DE COLORES    
+//-------------------
+$texto:#111111;
+$principal:#04AEF0;
+$secundario:#FF3500;
+html {
+    font-size: 15px;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: $texto;
+}
+//----------------------
+// SECCION BIENVENIDOS   
+//----------------------
+.bienvenidos {
+    background: url("../images/fondo.jpg") no-repeat center top;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    background-size: cover;
+    background-attachment: fixed !important;
+    padding-bottom: 0px !important;
+}
+.encabezado {
+    background: $texto;
+    padding: .5rem 0;
+}
+.encabezado .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex: 0 1 100%;
+}
+.encabezado .container .logo img {
+    width: 150px;
+    height: auto;
+}
+//Estilos iconos del encabezado: buscar y menu
+.encabezado .container .buscar,
+.menu {
+    border: none;
+    background: transparent;
+    font-size: 2rem;
+    color: #ffffff;
+    margin: 0px;
+}
+.buscar:focus,
+.menu:focus {
+    outline: 0;
+}
+.buscar {
+    margin-left: auto !important;
+    margin-right: .3rem !important;
+}
+//Estilos bloquebusqueda
+#bloquebusqueda {
+    flex: 1 1 100%;
+}
+.contenedorbloquebusqueda {
+    display: flex;
+    height: 3rem;
+    margin: 1rem 0;
+}
+.contenedorbloquebusqueda input[type="text"] {
+    border: 0;
+    border-radius: 5px 0 0 5px;
+    padding: 1rem;
+    flex: 1 1 auto;
+}
+.contenedorbloquebusqueda input[type="submit"] {
+    flex: 1 1 auto;
+    border: 0;
+    border-radius: 0 5px 5px 0;
+    background: $principal;
+    color: #ffffff;
+    flex: 0 1 auto;
+    padding: 0 1rem;
+    transition: all .5s ease;
+}
+.contenedorbloquebusqueda input[type="submit"]:focus,
+.contenedorbloquebusqueda input[type="text"]:focus {
+    outline: 0;
+}
+.contenedorbloquebusqueda input[type="submit"]:hover {
+    background: $secundario;
+}
+//Estilos Menu principal
+#menuprincipal {
+    flex: 1 1 100%;
+}
+#menuprincipal ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 1rem 0 0 0;
+    padding: 0;
+}
+#menuprincipal ul a {
+    display: block;
+    text-align: center;
+    border-top: 1px solid grey;
+    padding: .8rem 0;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+#menuprincipal ul a:hover {
+    color: $principal;
+}
+#menuprincipal ul li.active a {
+    color: $principal;
+}
+//Estilos texto Encabezado
+.textoencabezado {
+    padding-top: 2rem;
+    margin-top: 4rem;
+    color: #fff;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.textoencabezado .display-4 {
+    font-size: 2.3rem;
+}
+.textoencabezado .btn-primary {
+    color: #fff;
+    background-color: $principal;
+    border-color: $principal;
+    border-radius: 7px;
+    padding: .8rem;
+    width: 18rem;
+    margin-top: 1rem;
+    transition: all .5s ease;
+}
+.textoencabezado .btn-primary:hover {
+    background-color: $secundario;
+    border-color: $secundario;
+}
+//Estilos flecha bajar
+.flechabajar a {
+    text-decoration: none;
+    font-size: 2rem;
+    color: #fff;
+    display: inline-block;
+    animation: flechaanimada 1s ease-in-out infinite;
+    margin-bottom: auto;
+}
+@keyframes flechaanimada {
+    from {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(6px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+//-------------------
+// SECCION EMPRESA   
+//-------------------
+.empresa {
+    background: $principal;
+    color: #ffffff;
+}
+.empresa .row {
+    display: flex;
+    align-items: center;
+}
+.empresa img {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+//---------------------------
+// SECCION TU MEJOR ELECCION   
+//--------------------------
+.somostumejoreleccion span {
+    color: $principal;
+}
+.somostumejoreleccion ul,
+.somostumejoreleccion ul li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.somostumejoreleccion ul li .fa {
+    font-size: 2.3rem;
+    background: $secundario;
+    width: 4.7rem;
+    height: 4.7rem;
+    line-height: 4.7rem;
+    border-radius: 50%;
+    color: #ffffff;
+    text-align: center !important;
+}
+.somostumejoreleccion ul li h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 0.8rem;
+}
+.somostumejoreleccion ul li {
+    min-height: 9rem;
+}
+//---------------------------
+// SECCION SERVICIOS 
+//--------------------------
+.servicios {
+    background: url(../images/fondoservicios.jpg) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed !important;
+}
+.servicios img {
+    width: 40%;
+}
+.servicios article {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+.servicios h2 {
+    color: #ffffff;
+}
+.servicios h3 a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    transition: all .5s ease;
+}
+.servicios h3 a:hover {
+    color: $principal;
+}
+.servicios h3 a::after {
+    content: "\f054";
+    font-family: fontAwesome;
+    font-size: 2rem;
+    margin-left: 1rem;
+    opacity: .5;
+    position: relative;
+    left: 0;
+    transition: all .5s ease; //animacion affter o las flechas del menu de servicios
+}
+.servicios h3 a:hover::after {
+    left: -1rem;
+    opacity: 1;
+    color: $principal;
+}
+//---------------------------
+// GALERIA DE IMAGENES
+//--------------------------
+.galeriaimagenes a {
+    text-decoration: none;
+}
+.galeriaimagenes h4 {
+    font-size: 1rem;
+    color: $texto;
+    text-align: center;
+    font-weight: bold;
+    padding: .5rem 0;
+}
+.galeriaimagenes .container {
+    padding-left: 0;
+    padding-right: 0;
+}
+.galeriaimagenes .owl-nav {
+    display: flex;
+    justify-content: center;
+}
+.galeriaimagenes .owl-prev,
+.galeriaimagenes .owl-next {
+    color: $principal;
+    font-size: 3rem;
+    margin: 0 .5rem;
+    transition: all .5s ease;
+}
+.galeriaimagenes .owl-prev:hover,
+.galeriaimagenes .owl-next:hover {
+    color: $secundario;
+}
+//---------------------------
+// SECCION PIE DE PAGINA
+//--------------------------
+.piedepagina {
+    background: $texto;
+    color: #ffffff;
+    font-size: .9rem;
+    text-align: center;
+}
+.piedepagina .redessociales {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+.piedepagina .redessociales li {
+    margin: 0 10px;
+}
+.piedepagina .redessociales a {
+    color: #ffffff;
+    font-size: 2rem;
+    opacity: 0.5;
+    transition: all .5s ease;
+}
+.piedepagina .redessociales a:hover {
+    opacity: 1;
+}
+.piedepagina p {
+    margin: 0;
+}
+//---------------------------
+// IR ARRIBA
+//--------------------------
+.irarriba {
+    text-decoration: none;
+    font-size: 2.5rem;
+    color: $principal;
+    position: fixed;
+    bottom: .1rem;
+    right: .5rem;
+    z-index: 99999;
+    display: none;
+    transition: all .5s ease;
+}
+.irarriba:hover,
+.irarriba:focus {
+    outline: 0;
+    text-decoration: none;
+    color: $secundario;
+}
+//---------------------------
+//CABEZERA ANIMADA
+//--------------------------
+.fondomenu {
+    padding: .7rem 0;
+    background-image: linear-gradient(top, $texto 10%, $principal 75%, $texto);
+    transition: all 3s ease;
+}
+//-----------------------------------------------
+//PAGINA NOSOTROS
+//------------------------------------------------
+//SECCION BIENVENIDOS
+.paginasinternas .bienvenidos {
+    height: 50vh;
+}
+//SECCION RUTA
+.ruta {
+    background: $principal;
+    color: #ffffff;
+    font-weight: bold;
+}
+.ruta a {
+    text-decoration: underline;
+    color: #ffffff;
+    transition: all .5s ease;
+}
+.ruta a:hover {
+    color: $secundario;
+    text-decoration: none;
+}
+//SECCION RUTA
+#accordion .card {
+    margin-top: .6rem;
+}
+#accordion .card-header {
+    background: $principal;
+    transition: all .5s ease;
+}
+#accordion .card-header:hover {
+    background: $secundario;
+}
+#accordion .card-header a {
+    text-decoration: none;
+    color: #ffffff;
+}
+#valores p {
+    text-align: justify;
+}
+#valores p span {
+    font-weight: bold;
+}
+.trabajamos img {
+    width: 100%;
+    height: 100%;
+}
+//-----------------------------------------------
+//PAGINA SERVICIOS
+//------------------------------------------------
+//SECCION PAGINASERVICIOS
+.paginaservicios {
+    background: #016084;
+}
+.paginaservicios .itemservicios {
+    background: #ffffff;
+    margin: .5rem 0;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border: .4rem solid #D22400;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+.paginaservicios .col-md-4 {
+    display: flex;
+}
+.paginaservicios .itemservicios .fa {
+    font-size: 7rem;
+    color: $principal;
+    transition: all 1s ease;
+}
+.paginaservicios .itemservicios:hover .fa {
+    transform: rotateY(360deg);
+    transform-style: preserve-3d;
+    color: $secundario;
+}
+.paginaservicios .itemservicios h4 {
+    text-align: center;
+    margin: 1rem 0;
+}
+.paginaservicios .itemservicios .btn {
+    width: 80%;
+    background: $principal;
+    transition: all .5s ease;
+}
+.paginaservicios .itemservicios .btn:hover,
+.paginaservicios .itemservicios .btn:focus {
+    background: $secundario;
+}
+.paginasinternas .modal-body .col-sm-4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.paginasinternas .modal-body .col-sm-4 img {
+    transition: all 1s ease;
+}
+.paginasinternas .modal-body .col-sm-4:hover img {
+    transform: rotateY(360deg);
+    transform-style: preserve-3d;
+}
+//PAGINA CONTACTO
+.google-maps {
+    position: relative;
+    padding-bottom: 75%; // This is the aspect ratio
+    height: 0;
+    overflow: hidden;
+}
+.google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    border: 4px solid $secundario !important;
+    border-radius: 10px;
+}
+.contacto .offset-md-4 .btn-primary {
+    background: $principal;
+    transition: all .5s ease;
+}
+.contacto .offset-md-4 .btn-primary:hover,
+.contacto .offset-md-4 .btn-primary:focus {
+    background: $secundario;
+}
+//---------------------------
+// EMPIEZAN LAS MEDIAS QUERIS
+//--------------------------
+//ENCABEZADO
+@media(max-width: 575px) {
+    .encabezado .container {
+        margin: 0;
+    }
+}
+//VISTA DE LOS 768PX
+@media(min-width:768px) {
+    //ENCABEZADO
+    .encabezado .container .logo {
+        order: -2;
+    }
+    .encabezado .container .buscar {
+        margin-left: .8rem !important;
+        margin-right: 0 !important;
+    }
+    #menuprincipal {
+        display: block;
+        order: -1;
+        flex: 0 1 auto;
+        margin-left: auto !important;
+    }
+    #menuprincipal ul {
+        flex-direction: row;
+        margin: 0;
+        padding: 0;
+    }
+    #menuprincipal ul a {
+        border-top: 0;
+        padding: .8rem 0;
+        color: #ffffff;
+        text-transform: none;
+        margin: 0 1rem;
+        font-size: 1.3rem;
+        border-bottom: 4px solid transparent;
+        transition: all .5s ease;
+    }
+    #menuprincipal ul .active a,
+    #menuprincipal ul a:hover {
+        color: $principal;
+        border-bottom: 4px solid $principal;
+    }
+    #bloquebusqueda {
+        position: absolute;
+        width: 20rem;
+        right: 1rem;
+        top: 3.2rem;
+    }
+    .contenedorbloquebusqueda {
+        border: 1px solid $secundario;
+        border-radius: 5px;
+    }
+    //EMPRESA
+    .somostumejoreleccion li .fa {
+        transition: all .5s ease;
+    }
+    .somostumejoreleccion li:hover .fa {
+        transform: rotateY(360deg);
+        transform-style: preserve-3d;
+        background: $principal;
+    }
+    //SERVICIOS    
+    .servicios .col-md-4 {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .servicios h3 a::after {
+        display: none;
+    }
+    .servicios h3 {
+        width: 100%;
+    }
+    .servicios h3 a {
+        height: 84px;
+        display: block;
+        width: 100%;
+    }
+    .servicios p {
+        width: 100%;
+    }
+    .servicios img {
+        transition: all 1s ease;
+        overflow: hidden;
+    }
+    .servicios img:hover {
+        transform: rotateY(360deg);
+        transform-style: preserve-3d;
+    }
+    //PAGINA CONTACTO
+    .contacto .offset-md-4 .btn-primary {
+        margin-left: 10px;
+    }
+}
+//VISTA 992PX
+@media(min-width:992px) {
+    //BIENVENIDOS
+    .bienvenidos {
+        background: url("../images/fondog.jpg") no-repeat center top;
+        background-size: cover;
+    }
+    //EMPRESA
+    .empresa .col-lg-9 {
+        font-size: 1.4rem;
+    }
+    .h3 {
+        font-size: 2.1rem;
+    }
+    //SOMOS TU MEJOR ELECCION
+    .somostumejoreleccion img {
+        width: 100%;
+        height: 100%;
+    }
+    #izquierda li {
+        display: flex;
+        min-height: 6rem;
+        margin-top: 2rem;
+    }
+    #izquierda li .contenedoreleccion {
+        order: -1;
+        flex: 0.9 1 82%;
+    }
+    #derecha li {
+        display: flex;
+        min-height: 6rem;
+        margin-top: 2rem;
+    }
+    #derecha li .contenedoreleccion {
+        flex: 0.9 1 82%;
+    }
+    //SERVICIOS
+    .servicios {
+        background: url(../images/fondoserviciosg.jpg) no-repeat center center;
+        background-size: cover;
+    }
+    .servicios .col-md-4 p {
+        color: #ffffff;
+        min-height: 7.4rem;
+        max-height: 7.4rem;
+    }
+}
